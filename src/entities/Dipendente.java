@@ -2,15 +2,18 @@ package entities;
 
 import enums.TipoDipendente;
 
+import java.util.Random;
+
 public abstract class Dipendente {
     /*ATTRIBUTI*/
-    private String matricola;
+    private int matricola;
     private double stipendio;
     private TipoDipendente dipartimento;
 
     /*COSTRUTTI*/
     public Dipendente(String matricola, double stipendio, TipoDipendente dipartimento) {
-        this.matricola = matricola;
+        Random random = new Random().
+        this.matricola = (int) Math.floor(Math.random() * 1000);
         this.stipendio = stipendio;
         this.dipartimento = dipartimento;
     }
@@ -18,7 +21,7 @@ public abstract class Dipendente {
     /* METODI */
     public abstract void calculateSalary();
 
-    public String getMatricola() {
+    public int getMatricola() {
         return matricola;
     }
 
