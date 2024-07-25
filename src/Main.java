@@ -1,8 +1,6 @@
-import entities.Dipendente;
-import entities.DipendenteFullTime;
-import entities.DipendentePartTime;
-import entities.Dirigente;
+import entities.*;
 import enums.TipoDipendente;
+import interfaces.Ingresso;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,6 +11,11 @@ public class Main {
         for (int i = 0; i < aldoGiovanniGiacomoSRL.length; i++) {
             System.out.println(aldoGiovanniGiacomoSRL[i].getMatricola());
             aldoGiovanniGiacomoSRL[i].calculateSalary();
+        }
+        Volontario mentor = new Volontario("gabriel", 26, "è un bravo guaglione!");
+        Ingresso[] azienda = {aldo, giovanni, giacomo, mentor};
+        for (int i = 0; i < azienda.length; i++) {
+            azienda[i].checkIn();
         }
     }
 }

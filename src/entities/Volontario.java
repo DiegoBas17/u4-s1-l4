@@ -1,10 +1,10 @@
 package entities;
 
-import interfaces.CheckIn;
+import interfaces.Ingresso;
 
 import java.time.LocalDateTime;
 
-public class Volontario implements CheckIn {
+public class Volontario implements Ingresso {
     /*ATTRIBUTI*/
     public String nome;
     public int eta;

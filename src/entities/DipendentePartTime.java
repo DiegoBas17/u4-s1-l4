@@ -1,11 +1,11 @@
 package entities;
 
 import enums.TipoDipendente;
-import interfaces.CheckIn;
+import interfaces.Ingresso;
 
 import java.time.LocalDateTime;
 
-public class DipendentePartTime extends Dipendente implements CheckIn {
+public class DipendentePartTime extends Dipendente implements Ingresso {
     /*ATTRIBUTI*/
     private int oreLavorate;
 
