@@ -23,4 +23,5 @@ public class Main {
             azienda[i].checkIn();
         }
     }
+
 }
