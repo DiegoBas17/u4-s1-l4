@@ -1,8 +1,11 @@
 package entities;
 
 import enums.TipoDipendente;
+import interfaces.CheckIn;
 
-public class DipendenteFullTime extends Dipendente {
+import java.time.LocalDateTime;
+
+public class DipendenteFullTime extends Dipendente implements CheckIn {
     /*ATTRIBUTI*/
     private int oreLavorate;
 
@@ -16,5 +19,10 @@ public class DipendenteFullTime extends Dipendente {
     @Override
     public void calculateSalary() {
         System.out.println("Lo stipendio di un dipendente Full Time è di: " + getStipendio() + "€ per un ammontare di ore pari a: " + this.oreLavorate);
+    }
+
+    @Override
+    public void checkIn() {
+        System.out.println(LocalDateTime.now());
     }
 }
